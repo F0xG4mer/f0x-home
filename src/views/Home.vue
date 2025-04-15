@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Introduction from '@/components/Introduction.vue';
+import TwitterSection from '@/components/TwitterSection.vue';
 import { useMotion } from '@vueuse/motion'
 import { ref } from 'vue';
 
@@ -35,7 +36,9 @@ const { variant } = useMotion(target, {
     <div class="mt-50 h-100">
       <Introduction />
     </div>
-    <div class="h-100"></div>
+    <div class="mt-20 h-100">
+      <TwitterSection />
+    </div>
     <div class="h-100"></div>
     <div class="h-100"></div>
 
