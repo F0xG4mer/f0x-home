@@ -30,8 +30,7 @@ const { variant } = useMotion(target, {
 </script>
 
 <template>
-    <div class="w-screen h-screen m-auto img-cover">
-        test
+    <div class="w-11/12 h-dvh m-auto mt-30 img-cover drop-shadow-2xl drop-shadow-black">
     </div>
     <div class="mt-50 h-100">
       <Introduction />
