@@ -1,8 +1,4 @@
 <script setup>
-import Tweet from "vue-tweet";
-import highlightData from '@/data/tweet.json'
-
-const tweet = highlightData;
 
 </script>
 
@@ -11,11 +7,7 @@ const tweet = highlightData;
         <p class="drop-shadow-2xl drop-shadow-black"> Highlight</p>
     </div>
     <div class="w-dvw flex flex-row items-center justify-center gap-12 mt-25">
-      <Tweet class="w-lg"
-        :tweet-url="tweet.highlight"
-        theme="dark"
-        conversation="none"
-      />
+      <p>Place Tweet here</p>
     </div>
 
   </template>

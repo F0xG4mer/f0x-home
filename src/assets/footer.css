@@ -1,0 +1,16 @@
+@import "./variables.css";
+
+.bg-footer {
+    background: #B2B2B2;
+    background: -webkit-linear-gradient(0, var(--footer-gradient-start) 0%, var(--footer-gradient-start));
+    background: -moz-linear-gradient(0deg, var(--footer-gradient-start) 0%, var(--footer-gradient-start));
+    background: linear-gradient(0deg, var(--footer-gradient-start) 0%, var(--footer-gradient-end));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#B2B2B2",
+            endColorstr="#222222",
+            GradientType=0);
+}
+
+
+.h-footer {
+    height: 450px;
+}
