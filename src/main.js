@@ -8,9 +8,9 @@ import App from './App.vue'
 import { router } from './routes'
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { FaArrowDown } from "oh-vue-icons/icons";
+import { FaArrowDown, FaYoutube, FaDiscord, FaTwitter, FaInstagram } from "oh-vue-icons/icons";
 
-addIcons(FaArrowDown);
+addIcons(FaArrowDown, FaYoutube, FaDiscord, FaTwitter, FaInstagram);
 
 const app = createApp(App)
 
