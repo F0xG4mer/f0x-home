@@ -2,6 +2,9 @@
 import Introduction from '@/components/Introduction.vue';
 import TwitterSection from '@/components/TwitterSection.vue';
 import Footer from '@/components/Footer.vue'
+import Projects from '@/components/Projects.vue'
+import Models from '@/components/ModelsList.vue'
+
 </script>
 
 <template>
@@ -18,8 +21,12 @@ import Footer from '@/components/Footer.vue'
   <div class="mt-20 h-100">
     <TwitterSection />
   </div>
-  <div class="h-100"></div>
-  <div class="h-100"></div>
+  <div class="mt-20 h-100">
+    <Projects />
+  </div>
+  <div class="mt-20 h-100">
+    <Models />
+  </div>
   <Footer />
 </template>
 

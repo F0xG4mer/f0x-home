@@ -4,5 +4,5 @@ import SectionHeader from '@/components/SectionHeader.vue'
 </script>
 
 <template>
-   <SectionHeader title="Introduction" />
+   <SectionHeader title="Models" />
 </template>
