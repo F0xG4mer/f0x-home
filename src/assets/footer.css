@@ -14,3 +14,31 @@
 .h-footer {
     height: 450px;
 }
+
+
+.btn-hover {
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+}
+
+.btn-hover:hover {
+    translate: 0 -5px;
+    scale: 1.2;
+}
+
+
+.btn-rot-5deg:hover {
+    transform: rotate(5deg);
+}
+
+.btn-rot-10deg:hover {
+    transform: rotate(10deg);
+}
+
+.btn-rot--5deg:hover {
+    transform: rotate(-5deg);
+}
+
+.btn-rot--10deg:hover {
+    transform: rotate(-10deg);
+}

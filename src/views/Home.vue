@@ -8,12 +8,13 @@ import Models from '@/components/ModelsList.vue'
 </script>
 
 <template>
-  <div class="mt-12">
-    <img class="m-auto logo-top" src="/images/F0x-Logo.webp" draggable="false">
-  </div>
-  <div class="w-11/12 h-dvh m-auto mt-12 img-cover drop-shadow-2xl drop-shadow-black">
+  <div class="mt-15">
+    <img class="logo-top m-auto" src="/images/F0x-Logo.webp" draggable="false">
 
   </div>
+    <div
+      class="w-11/12 h-dvh m-auto mt-10 img-cover drop-shadow-2xl drop-shadow-black flex flex-column justify-content-start">
+    </div>
 
   <div class="mt-50 h-100">
     <Introduction />
@@ -35,7 +36,8 @@ import Models from '@/components/ModelsList.vue'
   scale: 7.5;
 }
 
+
 .logo-top {
-  height: 175px;
+  height: 250px;
 }
 </style>

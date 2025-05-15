@@ -10,11 +10,12 @@ html {
 }
 
 html, body {
-    margin: 0;
-    font-family: 'Whitney', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
+  overscroll-behavior: none;
+  margin: 0;
+  font-family: 'Whitney', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
 
 
