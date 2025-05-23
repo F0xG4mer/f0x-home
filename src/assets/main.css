@@ -19,7 +19,6 @@ html, body {
   font-style: normal;
 }
 
-
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -36,4 +35,8 @@ html, body {
 
 .w-95 {
   width: 95%;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

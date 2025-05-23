@@ -4,8 +4,21 @@ import TwitterSection from '@/components/TwitterSection.vue';
 import Footer from '@/components/Footer.vue'
 import Projects from '@/components/Projects.vue'
 import Models from '@/components/ModelsList.vue'
-import { motion, scale } from "motion-v"
+import { motion } from "motion-v"
+
+
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  document.body.style.overflow = 'hidden'
+
+  setTimeout(() => {
+    document.body.style.overflow = 'scroll'
+  }, 3000)
+})
+
 </script>
+
 
 <template>
   <!-- <div class="mt-15">
@@ -15,7 +28,7 @@ import { motion, scale } from "motion-v"
 
   <div class="m-5">
     <motion.div :animate="{
-      y: [-1000, 0, 0],
+      y: [-1000, 100, 0],
       rotate: [15, 15, 0],
       scale: [3, 3, 1],
       opacity: [0, 1, 1]
@@ -25,7 +38,7 @@ import { motion, scale } from "motion-v"
         ease: 'easeInOut',
         times: [0, 0.4, 1],
       }"
-      class="w-full h-dvh rounded-4xl img-cover drop-shadow-2xl drop-shadow-black flex flex-column justify-content-start">
+      class="w-full h-dvh rounded-4xl img-cover drop-shadow-2xl drop-shadow-black flex flex-column justify-content-start ">
     </motion.div>
   </div>
   <div class="mt-50 h-100">

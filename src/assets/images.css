@@ -3,5 +3,6 @@
     background-image: url(/images/f0x-home-top-cover.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: calc(55%);
+    background-position: center;
+
 }
