@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup >
 import SectionHeader from '@/components/SectionHeader.vue'
 
 </script>

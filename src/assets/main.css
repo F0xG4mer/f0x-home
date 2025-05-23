@@ -11,6 +11,7 @@ html {
 
 html, body {
   overscroll-behavior: none;
+  overflow-x: hidden;
   margin: 0;
   font-family: 'Whitney', sans-serif;
   font-optical-sizing: auto;
@@ -32,3 +33,7 @@ html, body {
   * :focus {
     outline: none !important;
   }
+
+.w-95 {
+  width: 95%;
+}

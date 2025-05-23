@@ -1,21 +1,33 @@
-<script setup lang="ts">
+<script setup>
 import Introduction from '@/components/Introduction.vue';
 import TwitterSection from '@/components/TwitterSection.vue';
 import Footer from '@/components/Footer.vue'
 import Projects from '@/components/Projects.vue'
 import Models from '@/components/ModelsList.vue'
-
+import { motion, scale } from "motion-v"
 </script>
 
 <template>
-  <div class="mt-15">
+  <!-- <div class="mt-15">
     <img class="logo-top m-auto" src="/images/F0x-Logo.webp" draggable="false">
 
-  </div>
-    <div
-      class="w-11/12 h-dvh m-auto mt-10 img-cover drop-shadow-2xl drop-shadow-black flex flex-column justify-content-start">
-    </div>
+  </div> -->
 
+  <div class="m-5">
+    <motion.div :animate="{
+      y: [-1000, 0, 0],
+      rotate: [15, 15, 0],
+      scale: [3, 3, 1],
+      opacity: [0, 1, 1]
+    }" :transition="{
+        duration: 3,
+        delay: 0.25,
+        ease: 'easeInOut',
+        times: [0, 0.4, 1],
+      }"
+      class="w-full h-dvh rounded-4xl img-cover drop-shadow-2xl drop-shadow-black flex flex-column justify-content-start">
+    </motion.div>
+  </div>
   <div class="mt-50 h-100">
     <Introduction />
   </div>
