@@ -1,0 +1,23 @@
+@import "./variables.css";
+
+.navbar-container {
+    color: var(--text-color);
+    font-size: 40px;
+
+    width: 1024px;
+
+    background: var(--footer-gradient-end);
+    background: radial-gradient(circle, var(--navbar-gradient-start) 0%, var(--navbar-gradient-end) 100%);
+    backdrop-filter: grayscale(1);
+}
+
+.navbar-container a {
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+
+.navbar-container a:hover {
+    color: var(--nav-text-hover);
+
+}

@@ -1,35 +1,42 @@
-@import './base.css';
+@import url('https://fonts.cdnfonts.com/css/whitney-2');
+@import "tailwindcss";
+@import "./variables.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+html {
+    background: var(--gradient-start);
+    background: -webkit-linear-gradient(0deg, var(--gradient-start) 0%, var(--gradient-center) 50%, var(--gradient-end) 100%);
+    background: -moz-linear-gradient(0deg, var(--gradient-start) 0%, var(--gradient-center) 50%, var(--gradient-end) 100%);
+    background: linear-gradient(0deg, var(--gradient-start) 0%, var(--gradient-center) 50%, var(--gradient-end) 100%);
+}
+
+html, body {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Whitney', sans-serif;
+  font-optical-sizing: auto;
   font-weight: normal;
+  font-style: normal;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  * :focus {
+    outline: none !important;
+  }
+
+.w-95 {
+  width: 95%;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.no-scroll {
+  overflow: hidden;
 }

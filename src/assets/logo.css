@@ -1,0 +1,25 @@
+
+.logo-row {
+  display: flex;
+  height: 144.48px;
+  gap: -3px;
+  align-items: flex-end;
+}
+
+.logo-scale {
+    scale: 1.5;
+}
+
+.logo-row img {
+  display: block;
+  gap: 0;
+  margin: 0;
+}
+
+.logo-x-offset {
+  transform: translateX(-10px);
+}
+
+.logo-0-offset {
+  transform: translateX(-2px);
+}
