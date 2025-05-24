@@ -2,6 +2,7 @@ import './assets/main.css'
 import './assets/images.css'
 import './assets/footer.css'
 import './assets/logo.css'
+import './assets/navigation.css'
 
 import { MotionPlugin } from '@vueuse/motion'
 import { createApp } from 'vue'

@@ -4,10 +4,14 @@ import TwitterSection from '@/components/TwitterSection.vue';
 import Footer from '@/components/Footer.vue'
 import Projects from '@/components/Projects.vue'
 import Models from '@/components/ModelsList.vue'
+import Navigation from '@/components/Navigation.vue';
+
+
 import { motion } from "motion-v"
 
 
 import { onMounted } from 'vue'
+
 
 onMounted(() => {
   document.documentElement.style.overflow = 'hidden';
@@ -18,6 +22,9 @@ onMounted(() => {
     document.documentElement.style.overflow = 'scroll';
   }, 4000);
 });
+
+
+
 </script>
 
 
@@ -25,6 +32,11 @@ onMounted(() => {
   <!-- <div class="mt-15">
 
   </div> -->
+
+      <div class="absolute mt-10 z-50 w-full">
+        <Navigation />
+      </div>
+
 
   <div class="m-5">
     <motion.div :animate="{
@@ -40,12 +52,31 @@ onMounted(() => {
     }"
       class="w-full h-dvh rounded-4xl img-cover drop-shadow-2xl drop-shadow-black flex flex-column justify-content-start ">
 
-      <div class="logo-row m-auto logo-scale">
-        <motion.img src="/images/F0x-Logo_F.svg" draggable="false" />
-        <motion.img src="/images/F0x-Logo_O.svg" draggable="false" />
-        <motion.img src="/images/F0x-Logo_X.svg" draggable="false" />
+      <!-- <div class="logo-row m-auto logo-scale">
+        <div>
+          <img src="/images/F0x-Logo_F.svg" draggable="false" />
+        </div>
+        <div>
+          <img class="logo-0-offset" src="/images/F0x-Logo_O.svg" draggable="false" />
+        </div>
+        <div>
+          <img class="logo-x-offset" src="/images/F0x-Logo_X.svg" draggable="false" />
+        </div>
+      </div> -->
 
+
+      <div class="logo-row m-auto logo-scale">
+        <div>
+          <img src="/images/F0x-Logo_F.svg" draggable="false" />
+        </div>
+        <div>
+          <img class="logo-0-offset" src="/images/F0x-Logo_O.svg" draggable="false" />
+        </div>
+        <div>
+          <img class="logo-x-offset" src="/images/F0x-Logo_X.svg" draggable="false" />
+        </div>
       </div>
+
 
     </motion.div>
   </div>

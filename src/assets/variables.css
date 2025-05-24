@@ -1,4 +1,5 @@
 :root {
+    --text-color: #fff;
     --gradient-start: #0e1330;
     --gradient-center: #231b2f;
     --gradient-end: #1e3c60;
@@ -6,4 +7,7 @@
     --footer-gradient-start: #b2b2b2;
     --footer-gradient-end: #222222;
 
+    --navbar-gradient-start: #ffffff00;
+    --navbar-gradient-end: #000000bf;
+    --nav-text-hover: #a3c1fe;
 }

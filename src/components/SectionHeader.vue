@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { readonly, ref } from 'vue'
-
 const props = defineProps(['title'])
 
 const text = props.title.split('')
