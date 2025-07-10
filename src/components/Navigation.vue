@@ -14,7 +14,7 @@ import NavElement from './NavElement.vue';
         }"
     
     class=" flex flex-row justify-around navbar-container rounded-full m-auto">
-        <NavElement title="Home" delay="3.625"/>
+        <NavElement title="Home" delay="3.625" />
         <NavElement title="Projects" delay="3.75" />
         <NavElement title="3D Gallery" delay="3.875" />
         <NavElement title="Contact" delay="4.0"/>

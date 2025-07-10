@@ -28,10 +28,7 @@ onMounted(() => {
 </script>
 
 
-<template>
-  <!-- <div class="mt-15">
-
-  </div> -->
+<template id="home">
 
       <div class="absolute mt-10 z-50 w-full">
         <Navigation />
@@ -43,7 +40,7 @@ onMounted(() => {
       y: [-1000, 100, 0],
       rotate: [15, 15, 0],
       scale: [3, 3, 1],
-      opacity: [0, 1, 1]
+      opacity: [0, 1, 1],
     }" :transition="{
       duration: 3,
       delay: 0.25,
@@ -86,7 +83,7 @@ onMounted(() => {
   <div class="mt-20 h-100">
     <TwitterSection />
   </div>
-  <div class="mt-20 h-100">
+  <div class="mt-20 h-100" id="projects">
     <Projects />
   </div>
   <div class="mt-20 h-100">
