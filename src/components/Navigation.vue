@@ -6,18 +6,18 @@ import NavElement from './NavElement.vue';
 <template>
     <motion.div
         :animate="{
-            opacity: [0,1]
+            opacity: [0, 1]
         }"
         :transition="{
             duration: 0.75,
             delay: 3.375,
         }"
     
-    class=" flex flex-row justify-around navbar-container rounded-full m-auto">
+    class=" flex flex-row justify-around navbar-container rounded-full m-auto p-2">
         <NavElement title="Home" delay="3.625" />
-        <NavElement title="Projects" delay="3.75" />
-        <NavElement title="3D Gallery" delay="3.875" />
-        <NavElement title="Contact" delay="4.0"/>
+        <NavElement title="Projects" delay="3.875" />
+        <NavElement title="3D Gallery" delay="4.125" />
+        <NavElement title="Contact" delay="4.375"/>
 
     </motion.div>
 </template>

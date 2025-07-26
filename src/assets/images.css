@@ -1,8 +1,17 @@
+@import "./variables.css";
+
+
 .img-cover {
     object-fit: fill;
     background-image: url(/images/f0x-home-top-cover.webp);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 115%;
     background-position: center;
+    box-shadow: 0 0 500px var(--drop-shadow-color) inset;
+    filter: saturate(120%) drop-shadow(0 0 25px var(--drop-shadow-color)); 
+}
 
+.img-cover-scale {
+    width: 100%;
+    height: calc(100vh - 3rem);
 }

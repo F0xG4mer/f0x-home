@@ -3,6 +3,7 @@ import './assets/images.css'
 import './assets/footer.css'
 import './assets/logo.css'
 import './assets/navigation.css'
+import './assets/socials.css'
 
 import { MotionPlugin } from '@vueuse/motion'
 import { createApp } from 'vue'

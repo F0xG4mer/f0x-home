@@ -1,0 +1,17 @@
+@import "./variables.css";
+
+.bg-socials {
+    background: var(--footer-gradient-end);
+    background: radial-gradient(circle, var(--navbar-gradient-start) 0%, var(--navbar-gradient-end) 100%);
+    backdrop-filter: grayscale(1);
+}
+
+.socials-icon svg {
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+
+.socials-icon:hover svg {
+    fill: var(--nav-text-hover);
+}

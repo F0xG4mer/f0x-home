@@ -8,7 +8,7 @@ const props = defineProps(['title', 'delay', 'href'])
     <motion.a
     :href="props.href"
     :animate="{
-        opacity: [0, 1],
+        opacity: [0, 0.8],
     }"
     :transition="{
         ease: 'easeInOut',

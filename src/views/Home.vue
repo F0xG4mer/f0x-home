@@ -5,6 +5,7 @@ import Footer from '@/components/Footer.vue'
 import Projects from '@/components/Projects.vue'
 import Models from '@/components/ModelsList.vue'
 import Navigation from '@/components/Navigation.vue';
+import ShareSocials from '@/components/ShareSocials.vue';
 
 
 import { motion } from "motion-v"
@@ -30,53 +31,48 @@ onMounted(() => {
 
 <template id="home">
 
-      <div class="absolute mt-10 z-50 w-full">
-        <Navigation />
-      </div>
+  <div class="absolute mt-10 z-50 w-full">
+    <Navigation />
+  </div>
 
 
+  <!-- LOGO -->
   <div class="m-5">
     <motion.div :animate="{
       y: [-1000, 100, 0],
       rotate: [15, 15, 0],
       scale: [3, 3, 1],
-      opacity: [0, 1, 1],
+      opacity: [0, 1, 1]
     }" :transition="{
       duration: 3,
       delay: 0.25,
       ease: 'easeInOut',
       times: [0, 0.4, 1],
-    }"
-      class="w-full h-dvh rounded-4xl img-cover drop-shadow-2xl drop-shadow-black flex flex-column justify-content-start ">
-
+    }" class="img-cover-scale rounded-4xl img-cover flex flex-column justify-content-start">
       <!-- <div class="logo-row m-auto logo-scale">
-        <div>
-          <img src="/images/F0x-Logo_F.svg" draggable="false" />
-        </div>
-        <div>
-          <img class="logo-0-offset" src="/images/F0x-Logo_O.svg" draggable="false" />
-        </div>
-        <div>
-          <img class="logo-x-offset" src="/images/F0x-Logo_X.svg" draggable="false" />
-        </div>
-      </div> -->
-
-
-      <div class="logo-row m-auto logo-scale">
-        <div>
-          <img src="/images/F0x-Logo_F.svg" draggable="false" />
-        </div>
-        <div>
-          <img class="logo-0-offset" src="/images/F0x-Logo_O.svg" draggable="false" />
-        </div>
-        <div>
-          <img class="logo-x-offset" src="/images/F0x-Logo_X.svg" draggable="false" />
-        </div>
-      </div>
-
+          <div class="hidden">
+            <img src="/images/F0x-Logo_F.svg" draggable="false" />
+          </div>
+          <div class="hidden">
+            <img class="logo-0-offset" src="/images/F0x-Logo_O.svg" draggable="false" />
+          </div>
+          <div class="hidden">
+            <img class="logo-x-offset" src="/images/F0x-Logo_X.svg" draggable="false" />
+          </div>
+        </div> -->
+      <motion.div :animate="{
+        opacity: [0, 1]
+      }" :transition="{
+          duration: 0.75,
+          delay: 4.5,
+        }" class="w-full">
+        <ShareSocials />
+      </motion.div>
 
     </motion.div>
   </div>
+  <!-- LOGO -->
+
   <div class="mt-50 h-100">
     <Introduction />
   </div>

@@ -8,6 +8,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Discord: typeof import('./src/components/icons/Discord.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Introduction: typeof import('./src/components/Introduction.vue')['default']
@@ -19,6 +20,10 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SectionHeader: typeof import('./src/components/SectionHeader.vue')['default']
+    Share: typeof import('./src/components/icons/Share.vue')['default']
+    ShareSocials: typeof import('./src/components/ShareSocials.vue')['default']
     TwitterSection: typeof import('./src/components/TwitterSection.vue')['default']
+    X: typeof import('./src/components/icons/X.vue')['default']
+    Youtube: typeof import('./src/components/icons/Youtube.vue')['default']
   }
 }
