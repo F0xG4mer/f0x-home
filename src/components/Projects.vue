@@ -4,5 +4,5 @@ import SectionHeader from '@/components/SectionHeader.vue'
 </script>
 
 <template>
-   <SectionHeader title="Projects" />
+   <SectionHeader title="&#8968;Projects&#8971;" />
 </template>

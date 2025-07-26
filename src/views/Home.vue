@@ -6,6 +6,7 @@ import Projects from '@/components/Projects.vue'
 import Models from '@/components/ModelsList.vue'
 import Navigation from '@/components/Navigation.vue';
 import ShareSocials from '@/components/ShareSocials.vue';
+import Copyright from '@/components/Copyright.vue';
 
 
 import { motion } from "motion-v"
@@ -67,6 +68,7 @@ onMounted(() => {
           delay: 4.5,
         }" class="w-full">
         <ShareSocials />
+        <Copyright/>
       </motion.div>
 
     </motion.div>
