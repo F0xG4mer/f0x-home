@@ -5,7 +5,7 @@ import ArrowDown from './icons/ArrowDown.vue';
 
 <template>
     <div class="image-cover">
-        <img src="../assets/images/f0x-home-top-cover.webp">
+        <img src="../assets/images/f0x-home-top-cover.webp" draggable="false" class="no-select">
     </div>
     <div class="info">
         <ContactSummary />
