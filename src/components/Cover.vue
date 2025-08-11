@@ -1,10 +1,18 @@
 <script setup>
-
+import ContactSummary from './ContactsSummary.vue';
+import ArrowDown from './icons/ArrowDown.vue';
 </script>
 
 <template>
     <div class="image-cover">
         <img src="../assets/images/f0x-home-top-cover.webp">
+    </div>
+    <div class="info">
+        <ContactSummary />
+        <ArrowDown />
+        <div>
+            <p class="copyright-info">Copyright &#169; 2025 F0xG4mer &#8226; All Rights Reserved</p>
+        </div>
     </div>
 </template>
 
@@ -27,6 +35,21 @@
     scale: 130%;
     object-position: 190px 50px;
 
+}
+
+.info {
+    position: absolute;
+    bottom: 48px;
+
+    z-index: 10;
+    width: calc(100vw - 5rem);
+    margin-left: 2.5rem;
+
+
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--text);
 }
 
 </style>

@@ -2,6 +2,11 @@
     --background: #000000;
     --background-gradient-start: #000000;
     --background-gradient-end: #0D0A26;
+
+    --text: #fff;
+    --nav-font-size: 24px;
+
+    --header-font-size: 56px;
 }
 
 
