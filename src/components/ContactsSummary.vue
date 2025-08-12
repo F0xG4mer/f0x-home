@@ -3,6 +3,7 @@ import Discord from './icons/Discord.vue';
 import X from './icons/X.vue';
 import Youtube from './icons/Youtube.vue';
 import Share from './icons/Share.vue';
+import Mail from './icons/Mail.vue';
 
 </script>
 
@@ -12,6 +13,7 @@ import Share from './icons/Share.vue';
         <X/>
         <Youtube/>
         <Discord/>
+        <Mail/>
     </div>
 </template>
 
@@ -19,15 +21,25 @@ import Share from './icons/Share.vue';
 .contact-sum-container {
     z-index: 10;
     position: relative;
-    width: 320px;
+    width: 360px;
     height: 56px;
 
     border-radius: 100px;
-    backdrop-filter: grayscale(1) brightness(50%);
+    backdrop-filter: grayscale(1) blur(4px) brightness(50%);
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.contact-sum-container > * {
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.contact-sum-container > *:hover {
+    scale: 1.25;
+    rotate: 5deg;
 }
 
 </style>

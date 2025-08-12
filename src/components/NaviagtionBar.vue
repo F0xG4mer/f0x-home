@@ -4,13 +4,14 @@
 <template>
     <div class="navbar-container">
         <a>Home</a>
-        <a>Project</a>
+        <a href="#projects" target="_top">Project</a>
         <a>3D Gallery</a>
         <a>Contact</a>
     </div>
 </template>
 
 <style>
+
 .navbar-container {
     z-index: 10;
 
@@ -21,7 +22,7 @@
     left: calc(50% - 350px);
 
     border-radius: 100px;
-    backdrop-filter: grayscale(1) brightness(50%);
+    backdrop-filter: grayscale(1) blur(4px) brightness(50%);
 
     display: flex;
     justify-content: space-evenly;
@@ -29,8 +30,13 @@
 }
 
 .navbar-container a {
-    color: var(--text);
     font-size: var(--nav-font-size);
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+.navbar-container a:hover {
+    text-decoration: underline;
 }
 
 </style>

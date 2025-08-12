@@ -9,7 +9,6 @@ import ArrowDown from './icons/ArrowDown.vue';
     </div>
     <div class="info">
         <ContactSummary />
-        <ArrowDown />
         <div>
             <p class="copyright-info">Copyright &#169; 2025 F0xG4mer &#8226; All Rights Reserved</p>
         </div>
@@ -49,7 +48,7 @@ import ArrowDown from './icons/ArrowDown.vue';
     display: flex;
     justify-content: space-between;
 
-    color: var(--text);
+    color: var(--copyright-text);
 }
 
 </style>

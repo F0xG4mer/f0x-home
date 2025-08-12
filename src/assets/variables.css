@@ -2,11 +2,18 @@
     --background: #000000;
     --background-gradient-start: #000000;
     --background-gradient-end: #0D0A26;
+    --yt-card-background: #444444;
 
     --text: #fff;
-    --nav-font-size: 24px;
+    --text-hover: #68B2F3;
+    --copyright-text: #919191;
 
+    --nav-font-size: 24px;
     --header-font-size: 56px;
+
+    --shadow-color: #9992ff2f;
+
+
 }
 
 

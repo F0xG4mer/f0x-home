@@ -1,7 +1,8 @@
 <script setup>
 import Cover from './components/Cover.vue';
-import IntroductionSection from './components/IntroductionSection.vue';
+import IntroductionSection from './components/Sections/IntroductionSection.vue';
 import NaviagtionBar from './components/NaviagtionBar.vue';
+import ProjectSection from './components/Sections/ProjectSection.vue';
 
 </script>
 
@@ -9,6 +10,7 @@ import NaviagtionBar from './components/NaviagtionBar.vue';
   <NaviagtionBar />
   <Cover />
   <IntroductionSection />
+  <ProjectSection />
 
 </template>
 
