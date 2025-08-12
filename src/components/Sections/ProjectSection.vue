@@ -1,10 +1,18 @@
 <script>
 import projects from '../../data/projects.json'
+import texts from '../../data/texts.json'
 
 export default {
     data() {
         return {
-            projectsList: projects
+            projectsList: projects,
+            texts,
+            lang: 'en'
+        }
+    },
+    computed: {
+        t() {
+            return this.texts[this.lang]
         }
     },
     methods: {
@@ -43,18 +51,17 @@ export default {
 <template>
     <div class="projects-container" id="projects">
         <h1>&#8968;Projects &#38; Contributions&#8971;</h1>
+        <p class="section-info">{{ t.projects }}</p>
         <div class="projects-list">
-            <div v-for="project in projectsList" :key="project.id">
-                <div class="project-item" @click="openVideo(project.id)">
-                    <img :src="getThumbnailUrl(project.id)" :alt="project.title">
-                    <div class="overlay-1">
-                        <span class="channel overlay-bg">{{ project.channel }}</span>
-                        <span class="views overlay-bg">{{ formatNumber(project.views) }} views</span>
-                        <span class="upload overlay-bg">{{ formatDate(project.upload) }}</span>
-                    </div>
-                    <!-- <div class="overlay-2">
-                        <span class="title overlay-bg">{{ project.title }}</span>
-                    </div> -->
+            <div v-for="project in projectsList" :key="project.id" class="project-item" @click="openVideo(project.id)">
+                <img :src="getThumbnailUrl(project.id)" :alt="project.title">
+                <div class="overlay-1">
+                    <span class="channel overlay-bg">{{ project.channel }}</span>
+                    <span class="views overlay-bg">{{ formatNumber(project.views) }} views</span>
+                    <span class="upload overlay-bg">{{ formatDate(project.upload) }}</span>
+                </div>
+                <div class="overlay-2">
+                    <span class="title overlay-bg">{{ project.title }}</span>
                 </div>
             </div>
         </div>
@@ -63,9 +70,10 @@ export default {
 
 <style>
 .projects-container {
-    margin: 128px auto;
+    margin: 128px auto 0;
     width: calc(100vw - 2.5rem);
-    height: 480px;
+    height: 560px;
+    overflow: visible;
 }
 
 .projects-container h1 {
@@ -73,36 +81,31 @@ export default {
     font-size: var(--header-font-size);
     text-align: center;
 }
-
 .projects-list {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 340px;
+    gap: 1.25rem;
+
     display: flex;
-    justify-content: start;
-    flex-wrap: nowrap;
+    flex-direction: row; /* Stack vertically */
+    overflow-x: scroll;
+    overflow-y: visible;
     align-items: center;
-
-    gap: calc(1.25rem);
-    overflow: scroll;
-
-    /* overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none; Firefox */
 }
 
-/* 
-.projects-list::-webkit-scrollbar {
-    display: none;
-} 
-*/
+.section-info {
+    font-size: var(--section-font-size);
+    margin: 2.5rem;
+}
 
 .project-item {
-    cursor: pointer;
-    position: relative;
+    flex: 0 0 auto;
     width: 560px;
     height: 315px;
+    cursor: pointer;
+    position: relative;
     transition: all 500ms;
-
 }
 
 
@@ -136,21 +139,26 @@ export default {
     height: 100%;
     border-radius: 16px;
     font-size: 20px;
-    z-index: 5;
+    z-index: 15;
 
+    transition: all 350ms;
+
+    opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
 
-/* .overlay-1:hover {
+/* 
+.overlay-1:hover {
     opacity: 0;
-}
+} */
 
 .overlay-2:hover {
+    opacity: 1;
     backdrop-filter: grayscale(1) blur(5px);
-} */
+}
 
 .overlay-bg {
     padding: 5px 6px 5px 6px;

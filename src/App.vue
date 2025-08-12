@@ -11,6 +11,13 @@ import ProjectSection from './components/Sections/ProjectSection.vue';
   <Cover />
   <IntroductionSection />
   <ProjectSection />
+  <h1>test</h1>
+  <h1>test</h1>
+  <h1>test</h1>
+  <h1>test</h1>
+  <h1>test</h1>
+  <h1>test</h1>
+  <h1>test</h1>
 
 </template>
 

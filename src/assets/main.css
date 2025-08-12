@@ -30,6 +30,13 @@ html, body {
                                     supported by Chrome, Edge, Opera and Firefox */
   }
 
-  * :focus {
+  *:focus {
     outline: none !important;
   }
+
+  a,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
