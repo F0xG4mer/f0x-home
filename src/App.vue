@@ -5,9 +5,11 @@ import NaviagtionBar from './components/NaviagtionBar.vue';
 import ProjectSection from './components/Sections/ProjectSection.vue';
 import HighlightSection from './components/Sections/HighlightSection.vue';
 import ShopSection from './components/Sections/ShopSection.vue'
+import NoiseOverlay from './components/NoiseOverlay.vue';
 </script>
 
 <template>
+  <NoiseOverlay/>
   <NaviagtionBar />
   <Cover />
   <IntroductionSection />
