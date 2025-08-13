@@ -75,7 +75,6 @@ export default {
     width: calc(100vw - 2.5rem);
     height: 560px;
     overflow: visible !important;
-    background-color: red;
 }
 
 .projects-container h1 {
@@ -89,13 +88,13 @@ export default {
     width: 100%;
     height: 340px;
     gap: 1.25rem;
+    background-color: red;
 
     display: flex;
     flex-direction: row;
     /* Stack vertically */
     align-items: center;
     overflow: visible;
-    background-color: blue;
 }
 
 .section-info {
