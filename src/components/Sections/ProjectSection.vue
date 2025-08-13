@@ -155,13 +155,6 @@ export default {
     backdrop-filter: grayscale(1) blur(5px);
 }
 
-.overlay-bg {
-    padding: 5px 6px 5px 6px;
-    backdrop-filter: grayscale(1) blur(3px) brightness(0.25);
-    border-radius: 8px;
-
-}
-
 .overlay-1>.channel {
     position: inherit;
     top: 1.25rem;

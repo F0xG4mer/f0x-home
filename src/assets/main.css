@@ -77,3 +77,10 @@ a:active {
     font-size: var(--section-font-size);
     margin: 2.5rem;
 }
+
+.overlay-bg {
+    padding: 5px 6px 5px 6px;
+    backdrop-filter: grayscale(1) blur(3px) brightness(0.25);
+    border-radius: 8px;
+
+}

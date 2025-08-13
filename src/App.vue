@@ -4,7 +4,7 @@ import IntroductionSection from './components/Sections/IntroductionSection.vue';
 import NaviagtionBar from './components/NaviagtionBar.vue';
 import ProjectSection from './components/Sections/ProjectSection.vue';
 import HighlightSection from './components/Sections/HighlightSection.vue';
-
+import ShopSection from './components/Sections/ShopSection.vue'
 </script>
 
 <template>
@@ -12,6 +12,7 @@ import HighlightSection from './components/Sections/HighlightSection.vue';
   <Cover />
   <IntroductionSection />
   <ProjectSection />
-  <HighlightSection />
+  <ShopSection />
+  <!-- <HighlightSection /> -->
 
 </template>

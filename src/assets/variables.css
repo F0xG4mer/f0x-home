@@ -3,6 +3,7 @@
     --background-gradient-start: #000000;
     --background-gradient-end: #070514;
     --yt-card-background: #444444;
+    --sub-background:#15103a;
 
     --text: #fff;
     --text-hover: #68B2F3;
@@ -13,7 +14,7 @@
 
     --header-font-size: 56px;
 
-    --shadow-color: #9992ff2f;
+    --shadow-color: #1d1d1d2f;
 
 
 }
