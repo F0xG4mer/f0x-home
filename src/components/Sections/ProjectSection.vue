@@ -50,8 +50,10 @@ export default {
 
 <template>
     <div class="projects-container" id="projects">
-        <h1>&#8968;Projects &#38; Contributions&#8971;</h1>
-        <p class="section-info">{{ t.projects }}</p>
+        <div class="projects-text-box">
+            <h1>&#8968;Projects &#38; Contributions&#8971;</h1>
+            <p class="section-info">{{ t.projects }}</p>
+        </div>
         <div class="projects-list">
             <div v-for="project in projectsList" :key="project.id" class="project-item" @click="openVideo(project.id)">
                 <img :src="getThumbnailUrl(project.id)" :alt="project.title">
@@ -72,10 +74,9 @@ export default {
 <style>
 .projects-container {
     margin: 128px auto 0;
-    width: calc(100vw - 2.5rem);
     height: 560px;
-    overflow: visible !important;
 }
+
 
 .projects-container h1 {
     color: var(--text);
@@ -85,16 +86,15 @@ export default {
 
 .projects-list {
     position: relative;
-    width: 100%;
+    width: calc(100% - 5rem);
     height: 340px;
     gap: 1.25rem;
-    background-color: red;
-
+    padding: 1rem 2.5rem 1rem 2.5rem;
     display: flex;
     flex-direction: row;
     /* Stack vertically */
     align-items: center;
-    overflow: visible;
+    overflow: scroll;
 }
 
 .section-info {
