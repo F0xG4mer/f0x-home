@@ -55,6 +55,7 @@ export default {
         <div class="projects-list">
             <div v-for="project in projectsList" :key="project.id" class="project-item" @click="openVideo(project.id)">
                 <img :src="getThumbnailUrl(project.id)" :alt="project.title">
+
                 <div class="overlay-1">
                     <span class="channel overlay-bg">{{ project.channel }}</span>
                     <span class="views overlay-bg">{{ formatNumber(project.views) }} views</span>
@@ -73,7 +74,8 @@ export default {
     margin: 128px auto 0;
     width: calc(100vw - 2.5rem);
     height: 560px;
-    overflow: visible;
+    overflow: visible !important;
+    background-color: red;
 }
 
 .projects-container h1 {
@@ -81,6 +83,7 @@ export default {
     font-size: var(--header-font-size);
     text-align: center;
 }
+
 .projects-list {
     position: relative;
     width: 100%;
@@ -88,10 +91,11 @@ export default {
     gap: 1.25rem;
 
     display: flex;
-    flex-direction: row; /* Stack vertically */
-    overflow-x: scroll;
-    overflow-y: visible;
+    flex-direction: row;
+    /* Stack vertically */
     align-items: center;
+    overflow: visible;
+    background-color: blue;
 }
 
 .section-info {
@@ -106,6 +110,7 @@ export default {
     cursor: pointer;
     position: relative;
     transition: all 500ms;
+    overflow: visible;
 }
 
 
@@ -119,7 +124,9 @@ export default {
     width: 100%;
     height: 100%;
     border-radius: 16px;
+
 }
+
 
 .overlay-1 {
     display: block;
@@ -129,7 +136,7 @@ export default {
     height: 100%;
     border-radius: 16px;
     font-size: 20px;
-    z-index: 10;
+    z-index: 15;
 }
 
 .overlay-2 {
@@ -139,7 +146,7 @@ export default {
     height: 100%;
     border-radius: 16px;
     font-size: 20px;
-    z-index: 15;
+    z-index: 20;
 
     transition: all 350ms;
 
