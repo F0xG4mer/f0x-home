@@ -74,6 +74,8 @@ export default {
 }
 
 .item-overlay {
+    cursor: pointer;
+
     position: absolute;
     top: 0;
     width: 100%;
