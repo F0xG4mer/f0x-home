@@ -66,3 +66,9 @@ a:active {
   scrollbar-width: 8px;
   scrollbar-color: #424242 #00000000;
 }
+
+.title {
+    color: var(--text);
+    font-size: var(--header-font-size);
+    text-align: center;
+}

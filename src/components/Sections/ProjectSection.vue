@@ -51,7 +51,7 @@ export default {
 <template>
     <div class="projects-container" id="projects">
         <div class="projects-text-box">
-            <h1>&#8968;Projects &#38; Contributions&#8971;</h1>
+            <h1 class="title">&#8968;Projects &#38; Contributions&#8971;</h1>
             <p class="section-info">{{ t.projects }}</p>
         </div>
         <div class="projects-list">
@@ -64,7 +64,7 @@ export default {
                     <span class="upload overlay-bg">{{ formatDate(project.upload) }}</span>
                 </div>
                 <div class="overlay-2">
-                    <span class="title overlay-bg">{{ project.title }}</span>
+                    <span class="vid-title overlay-bg">{{ project.title }}</span>
                 </div>
             </div>
         </div>
@@ -73,16 +73,11 @@ export default {
 
 <style>
 .projects-container {
-    margin: 128px auto 0;
+    margin: 128px auto;
     height: 560px;
 }
 
 
-.projects-container h1 {
-    color: var(--text);
-    font-size: var(--header-font-size);
-    text-align: center;
-}
 
 .projects-list {
     position: relative;
@@ -191,7 +186,7 @@ export default {
     left: 1.25rem;
 }
 
-.overlay-2>.title {
+.overlay-2>.vid-title {
     position: inherit;
     font-size: 24px;
     width: calc(100% - 100px);

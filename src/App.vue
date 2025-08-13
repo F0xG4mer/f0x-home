@@ -3,6 +3,7 @@ import Cover from './components/Cover.vue';
 import IntroductionSection from './components/Sections/IntroductionSection.vue';
 import NaviagtionBar from './components/NaviagtionBar.vue';
 import ProjectSection from './components/Sections/ProjectSection.vue';
+import HighlightSection from './components/Sections/HighlightSection.vue';
 
 </script>
 
@@ -11,16 +12,6 @@ import ProjectSection from './components/Sections/ProjectSection.vue';
   <Cover />
   <IntroductionSection />
   <ProjectSection />
-  <h1>test</h1>
-  <h1>test</h1>
-  <h1>test</h1>
-  <h1>test</h1>
-  <h1>test</h1>
-  <h1>test</h1>
-  <h1>test</h1>
+  <HighlightSection />
 
 </template>
-
-<style>
-
-</style>
