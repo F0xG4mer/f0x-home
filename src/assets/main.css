@@ -72,3 +72,8 @@ a:active {
     font-size: var(--header-font-size);
     text-align: center;
 }
+
+.section-text {
+    font-size: var(--section-font-size);
+    margin: 2.5rem;
+}

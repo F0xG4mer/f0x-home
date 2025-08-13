@@ -1,18 +1,16 @@
 <script>
 import projects from '../../data/projects.json'
-import texts from '../../data/texts.json'
 
 export default {
     data() {
         return {
             projectsList: projects,
-            texts,
             lang: 'en'
         }
     },
     computed: {
         t() {
-            return this.texts[this.lang]
+            return this.$texts[this.lang]
         }
     },
     methods: {
@@ -52,7 +50,7 @@ export default {
     <div class="projects-container" id="projects">
         <div class="projects-text-box">
             <h1 class="title">&#8968;Projects &#38; Contributions&#8971;</h1>
-            <p class="section-info">{{ t.projects }}</p>
+            <p class="section-text">{{ t.projects }}</p>
         </div>
         <div class="projects-list">
             <div v-for="project in projectsList" :key="project.id" class="project-item" @click="openVideo(project.id)">
@@ -92,10 +90,6 @@ export default {
     overflow: scroll;
 }
 
-.section-info {
-    font-size: var(--section-font-size);
-    margin: 2.5rem;
-}
 
 .project-item {
     flex: 0 0 auto;

@@ -1,11 +1,23 @@
-<script> 
-
+<script>
+export default {
+    data() {
+        return {
+            lang: 'en'
+        }
+    },
+    computed: {
+        t() {
+            return this.$texts[this.lang]
+        }
+    }
+}
 </script>
 
 
 <template>
     <div class="introduction-container">
         <h1 class="title">&#8968;Introduction&#8971;</h1>
+        <p class="section-text">{{ t.introduction }}</p>
     </div>
 </template>
 
@@ -15,5 +27,4 @@
     width: calc(100vw - 2.5rem);
     height: 560px;
 }
-
 </style>
