@@ -39,7 +39,7 @@ const storeList = ref(storeItems)
 
 .shop-list-container {
     margin:auto;
-    width: 1200px;
+    width: 1000px;
     border-radius: 16px;
 
     display: flex;
@@ -51,7 +51,7 @@ const storeList = ref(storeItems)
 
 .shop-item {
     position: relative;
-    width: 300px;
+    width: 310px;
     transition: all 250ms;
 
 
