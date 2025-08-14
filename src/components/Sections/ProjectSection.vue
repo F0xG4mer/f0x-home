@@ -71,7 +71,7 @@ export default {
 
 <style>
 .projects-container {
-    margin: 128px auto;
+    margin: 256px auto 0;
     height: 560px;
 }
 

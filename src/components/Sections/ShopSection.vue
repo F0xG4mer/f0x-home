@@ -31,7 +31,7 @@ const storeList = ref(storeItems)
 
 <style>
 .shop-container {
-    margin: 128px auto;
+    margin: 256px auto;
     width: 100vw;
     font-size: 20px;
 
