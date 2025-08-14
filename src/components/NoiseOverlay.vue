@@ -7,7 +7,7 @@
     width: 100vw;
     height: 100vh;
     content: "";
-    opacity: 0.08;
+    opacity: 0.07;
     filter: brightness(0.35);
     pointer-events: none;
     background: url(/public/noise.gif);
