@@ -9,7 +9,7 @@ import NoiseOverlay from './components/NoiseOverlay.vue';
 </script>
 
 <template>
-  <NoiseOverlay/>
+  <!-- <NoiseOverlay/> -->
   <NaviagtionBar />
   <Cover />
   <IntroductionSection />

@@ -1,5 +1,5 @@
 <template>
-    <a href="mailto:management@f0xg4mer.com">
+    <a href="mailto:management@f0xg4mer.com" rel="noopener noreferrer">
         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_146_20)">
                 <path
