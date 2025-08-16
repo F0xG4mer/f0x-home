@@ -28,11 +28,11 @@ import TwitterItem from '../TwitterItem.vue';
 .tweets-list {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 5rem;
 }
 .tweets-list >* {
     flex-shrink: 0;
-    width: 500px;
+    width: 400px;
 }
 </style>
 
