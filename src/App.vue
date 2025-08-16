@@ -13,8 +13,8 @@ import NoiseOverlay from './components/NoiseOverlay.vue';
   <NaviagtionBar />
   <Cover />
   <IntroductionSection />
+  <HighlightSection />
   <ProjectSection />
   <ShopSection />
-  <!-- <HighlightSection /> -->
 
 </template>
