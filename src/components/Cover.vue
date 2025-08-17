@@ -9,9 +9,6 @@ import ArrowDown from './icons/ArrowDown.vue';
     </div>
     <div class="info">
         <ContactSummary />
-        <div>
-            <p class="copyright-info">Copyright &#169; 2025 F0xG4mer &#8226; All Rights Reserved</p>
-        </div>
     </div>
 </template>
 

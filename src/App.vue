@@ -6,6 +6,8 @@ import ProjectSection from './components/Sections/ProjectSection.vue';
 import HighlightSection from './components/Sections/HighlightSection.vue';
 import ShopSection from './components/Sections/ShopSection.vue'
 import NoiseOverlay from './components/NoiseOverlay.vue';
+import Footer from './components/Footer.vue';
+
 </script>
 
 <template>
@@ -16,5 +18,6 @@ import NoiseOverlay from './components/NoiseOverlay.vue';
   <HighlightSection />
   <ProjectSection />
   <ShopSection />
+  <Footer />
 
 </template>
