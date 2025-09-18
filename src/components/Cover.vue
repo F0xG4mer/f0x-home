@@ -2,16 +2,9 @@
 import ContactSummary from './ContactsSummary.vue';
 import ArrowDown from './icons/ArrowDown.vue';
 
-import { motion, useScroll, useTransform, useSpring } from "motion-v"
-import Youtube from './icons/Youtube.vue';
+import { motion, useScroll, useTransform } from "motion-v"
 
-// track global scroll position
 const { scrollY } = useScroll()
-
-// map scrollY → smaller translateY (slower movement)
-// e.g. when page scrolls 0 → img moves 0; page scrolls 500px → img moves -100px
-//const rawY = useTransform(scrollY, [0, 600], [0, 600])
-//const smoothY = useSpring(rawY, { stiffness: 100, damping: 50 })
 
 const y = useTransform(scrollY, value => value * 0.5)
 </script>
