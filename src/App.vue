@@ -12,7 +12,7 @@ import Footer from './components/Footer.vue';
 
 <template>
   <NoiseOverlay/>
-  <NaviagtionBar />
+  <!--<NaviagtionBar />-->
   <Cover />
   <IntroductionSection />
   <HighlightSection />

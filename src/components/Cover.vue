@@ -1,9 +1,52 @@
 <script setup>
 import ContactSummary from './ContactsSummary.vue';
 import ArrowDown from './icons/ArrowDown.vue';
+
+import { motion, useScroll, useTransform, useSpring } from "motion-v"
+import Youtube from './icons/Youtube.vue';
+
+// track global scroll position
+const { scrollY } = useScroll()
+
+// map scrollY → smaller translateY (slower movement)
+// e.g. when page scrolls 0 → img moves 0; page scrolls 500px → img moves -100px
+//const rawY = useTransform(scrollY, [0, 600], [0, 600])
+//const smoothY = useSpring(rawY, { stiffness: 100, damping: 50 })
+
+const y = useTransform(scrollY, value => value * 0.5)
 </script>
 
 <template>
+    <div class="cover-container">
+        <motion.div :style="{ y: y }">
+            <img src="../assets/images/f0x-home-top-cover.webp" draggable="false" class="no-select cover-image" />
+        </motion.div>
+
+    </div>
+
+
+</template>
+
+<style>
+.cover-container {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cover-image {
+    object-position: 200px 0px;
+}
+</style>
+
+
+<!--
+<template>
+
+
     <div class="image-cover">
         <img src="../assets/images/f0x-home-top-cover.webp" draggable="false" class="no-select">
     </div>
@@ -11,7 +54,10 @@ import ArrowDown from './icons/ArrowDown.vue';
         <ContactSummary />
     </div>
 </template>
+-->
 
+
+<!--
 <style>
 .image-cover {
     width: calc(100vw - 2.5rem);
@@ -49,3 +95,4 @@ import ArrowDown from './icons/ArrowDown.vue';
 }
 
 </style>
+-->
