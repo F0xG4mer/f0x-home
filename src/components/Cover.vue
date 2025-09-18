@@ -1,5 +1,4 @@
 <script setup>
-import ContactSummary from './ContactsSummary.vue';
 import ArrowDown from './icons/ArrowDown.vue';
 
 import { motion, useScroll, useTransform } from "motion-v"
