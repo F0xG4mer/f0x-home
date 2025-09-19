@@ -1,16 +1,12 @@
-<script>
-export default {
-    data() {
-        return {
-            lang: 'en'
-        }
-    },
-    computed: {
-        t() {
-            return this.$texts[this.lang]
-        }
-    }
-}
+<script setup>
+import { ref, computed } from "vue"
+import { motion, useScroll, useTransform } from "motion-v"
+import texts from "../../data/texts.json" // or wherever your translations live
+
+const lang = ref("en")
+
+const t = computed(() => texts[lang.value])
+
 </script>
 
 
@@ -29,15 +25,16 @@ export default {
     margin: 256px auto 0;
     width: calc(100vw - 2.5rem);
 }
+
 .intro-image {
     width: 100%;
     height: 100%;
 }
 
-.intro-image img{
+.intro-image img {
     object-fit: cover;
     width: 100%;
     border-radius: 20px;
-
 }
+
 </style>

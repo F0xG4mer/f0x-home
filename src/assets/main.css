@@ -3,6 +3,7 @@
 
 
 html {
+    scroll-behavior: smooth;
     background-color: var(--background);
     background: -webkit-linear-gradient(180deg, var(--background-gradient-start) 30%, var(--background-gradient-end) 100%);
     background: -moz-linear-gradient(180deg, var(--background-gradient-start) 30%, var(--background-gradient-end) 100%);

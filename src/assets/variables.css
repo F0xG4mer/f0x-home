@@ -8,7 +8,9 @@
 
 
     --text: #fff;
-    --text-hover: #68B2F3;
+    --text-active: #68B2F3;
+    --text-hover: #68b2f36f;
+
     --copyright-text: #919191;
 
     --nav-font-size: 24px;
@@ -17,6 +19,7 @@
     --header-font-size: 56px;
 
     --shadow-color: #1d1d1d2f;
+    --hard-shadow-color: #1e1d28;
 
 
 }

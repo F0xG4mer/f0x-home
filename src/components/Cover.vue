@@ -6,11 +6,14 @@ import { motion, useScroll, useTransform } from "motion-v"
 const { scrollY } = useScroll()
 
 const y = useTransform(scrollY, value => value * 0.5)
+const rotate = useTransform(scrollY, [0, 1500], [0, 10])
+const scale = useTransform(scrollY, [0, 1500], [1, 1.2])
+
 </script>
 
 <template>
     <div class="cover-container">
-        <motion.div :style="{ y: y }">
+        <motion.div :style="{ y, rotate, scale}">
             <img src="../assets/images/f0x-home-top-cover.webp" draggable="false" class="no-select cover-image" />
         </motion.div>
 
@@ -30,7 +33,8 @@ const y = useTransform(scrollY, value => value * 0.5)
 }
 
 .cover-image {
-    object-position: 200px 0px;
+    object-position: 300px -100px;
+
 }
 </style>
 
