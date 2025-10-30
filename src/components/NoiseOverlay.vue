@@ -10,7 +10,7 @@
     opacity: 0.07;
     filter: brightness(0.35);
     pointer-events: none;
-    background: url(/public/noise.gif);
+    background: url(/noise.gif);
     z-index: 50;
 }
 </style>
