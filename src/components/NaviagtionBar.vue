@@ -17,9 +17,10 @@ const y = useTransform(scrollY, [0, 750, 1500], [0, 0, -750])
 
 <template>
   <motion.div class="navbar-container" :style="{ y }">
-    <a v-for="tab in tabs" :key="tab" :class="{ active: activeTab === tab }" @click="setActive(tab)">
+    <a 
+      v-for="tab in tabs" :key="tab" :class="{ active: activeTab === tab }" @click="setActive(tab)">
       {{ tab }}
-    </a>
+  </a>
   </motion.div>
 </template>
 

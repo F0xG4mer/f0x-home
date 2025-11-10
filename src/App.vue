@@ -14,23 +14,25 @@ window.scrollTo(0, 2);
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  // Disable scrolling (but keep scrollbar visible)
-  const disableScroll = (e) => {
-    e.preventDefault()
+
+  const scrollUp = () => {
+    window.scrollTo({top:0, behavior: 'instant'});
   }
 
-  // Add event listener to block scroll wheel, touch, and key scrolls
-  window.addEventListener('wheel', disableScroll, { passive: false })
-  window.addEventListener('touchmove', disableScroll, { passive: false })
-  window.addEventListener('keydown', disableScroll, { passive: false })
+  window.addEventListener(
+    'scroll',
+    scrollUp
+  );
 
-  // After 2 seconds, remove listeners to re-enable scroll
   setTimeout(() => {
-    window.removeEventListener('wheel', disableScroll)
-    window.removeEventListener('touchmove', disableScroll)
-    window.removeEventListener('keydown', disableScroll)
-  }, 2000)
-})
+    window.removeEventListener(
+      'scroll',
+      scrollUp
+    );
+  }, 2000);
+
+
+});
 </script>
 
 <template>
@@ -43,3 +45,4 @@ onMounted(() => {
   <ShopSection />
   <Footer />
 </template>
+i
