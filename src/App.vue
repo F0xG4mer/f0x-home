@@ -9,6 +9,7 @@ import NoiseOverlay from './components/NoiseOverlay.vue';
 import Footer from './components/Footer.vue';
 
 window.scrollTo(0, 2);
+
 </script>
 
 <template>
@@ -20,5 +21,4 @@ window.scrollTo(0, 2);
   <ProjectSection />
   <ShopSection />
   <Footer />
-
 </template>

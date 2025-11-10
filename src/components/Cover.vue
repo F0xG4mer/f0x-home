@@ -13,7 +13,9 @@ const scale = useTransform(scrollY, [0, 1500], [1, 1.2])
 
 <template>
     <div class="cover-container">
-        <motion.div :style="{ y, rotate, scale}" :initial="{filter:'blur(10px)', rotate: 20, scale: 4}" :animate="{filter:'blur(0)', rotate: 0, scale:1}" :transition="{ duration: 1.5 }">
+        <motion.div :style="{ y, rotate, scale }" :initial="{ filter: 'blur(10px) grayscale(1)', rotate: 20, scale: 4 }"
+            :animate="{ filter: 'blur(0) grayscale(0)', rotate: 0, scale: 1 }"
+            :transition="{ duration: 2, ease: 'easeOut' }">
             <img src="../assets/images/placeholder-1920x1080.png" draggable="false" class="no-select cover-image" />
         </motion.div>
 
@@ -29,12 +31,14 @@ const scale = useTransform(scrollY, [0, 1500], [1, 1.2])
     height: 100vh;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .cover-image {
-    object-position: 0 0;
-
+    /*object-position: 0 0;*/
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 </style>
 
