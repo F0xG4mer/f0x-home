@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "motion-v"
 
 const activeTab = ref("Home")
 
-const tabs = ["Home", "Project", "3D Gallery", "Contact"]
+const tabs = ["Home", "Projects", "3D Gallery", "Contact"]
 
 const setActive = (tab) => {
   activeTab.value = tab
