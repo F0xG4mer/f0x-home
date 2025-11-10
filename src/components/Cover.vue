@@ -1,7 +1,7 @@
 <script setup>
 import ArrowDown from './icons/ArrowDown.vue';
 
-import { motion, useScroll, useTransform } from "motion-v"
+import { animate, motion, useScroll, useTransform } from "motion-v"
 
 const { scrollY } = useScroll()
 
@@ -13,8 +13,8 @@ const scale = useTransform(scrollY, [0, 1500], [1, 1.2])
 
 <template>
     <div class="cover-container">
-        <motion.div :style="{ y, rotate, scale}">
-            <img src="../assets/images/f0x-home-top-cover.webp" draggable="false" class="no-select cover-image" />
+        <motion.div :style="{ y, rotate, scale}" :initial="{filter:'blur(10px)', rotate: 20, scale: 4}" :animate="{filter:'blur(0)', rotate: 0, scale:1}" :transition="{ duration: 1.5 }">
+            <img src="../assets/images/placeholder-1920x1080.png" draggable="false" class="no-select cover-image" />
         </motion.div>
 
     </div>
@@ -33,7 +33,7 @@ const scale = useTransform(scrollY, [0, 1500], [1, 1.2])
 }
 
 .cover-image {
-    object-position: 300px -100px;
+    object-position: 0 0;
 
 }
 </style>

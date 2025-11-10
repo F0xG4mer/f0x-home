@@ -8,6 +8,7 @@ import ShopSection from './components/Sections/ShopSection.vue'
 import NoiseOverlay from './components/NoiseOverlay.vue';
 import Footer from './components/Footer.vue';
 
+window.scrollTo(0, 2);
 </script>
 
 <template>
