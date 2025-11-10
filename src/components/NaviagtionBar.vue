@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from "vue"
-import { motion, useScroll, useTransform } from "motion-v"
+import { ref, onMounted } from "vue"
+import { delay, motion, useScroll, useTransform } from "motion-v"
 
 const activeTab = ref("Home")
 
@@ -13,14 +13,55 @@ const setActive = (tab) => {
 const { scrollY } = useScroll()
 
 const y = useTransform(scrollY, [0, 750, 1500], [0, 0, -750])
+
+const animation = ref({})
+
+// Animate sequentially on mount
+onMounted(async () => {
+  // Step 1: Scale circle in
+  animation.value = {
+    scale: 1,
+    borderRadius: '50%',
+    width: '56px',
+    height: '56px',
+    left: 'calc(50% - 28px)',
+    contentVisibility: 'hidden',
+    transition: {
+      delay: 2.25,
+      type: 'spring',
+      stiffness: 300,
+      damping: 15,
+    },
+  }
+
+  // Wait a bit before next phase
+  await new Promise(resolve => setTimeout(resolve, 2850))
+
+  // Step 2: Morph to bar
+  animation.value = {
+    scale: 1,
+    borderRadius: '20px',
+    width: '700px',
+    height: '56px',
+    left: 'calc(50% - 350px)',
+    contentVisibility: 'hidden',
+    transition: {
+      type: 'spring',
+      stiffness: 200,
+      damping: 20,
+    },
+  }
+})
+
 </script>
 
 <template>
-  <motion.div class="navbar-container" :style="{ y }">
-    <a 
-      v-for="tab in tabs" :key="tab" :class="{ active: activeTab === tab }" @click="setActive(tab)">
+  <motion.div class="navbar-container" :style="{ y }"
+    :initial="{ scale: 0, borderRadius: '50%', width: '56px', height: '56px', left: 'calc(50% - 28px)' }" :animate="animation"
+    transition="spring">
+    <a v-for="tab in tabs" :key="tab" :class="{ active: activeTab === tab }" @click="setActive(tab)">
       {{ tab }}
-  </a>
+    </a>
   </motion.div>
 </template>
 
@@ -31,7 +72,7 @@ const y = useTransform(scrollY, [0, 750, 1500], [0, 0, -750])
   width: 700px;
   height: 56px;
   top: 48px;
-  left: calc(50% - 350px);
+  /* left: calc(50% - 350px); */
   border-radius: 20px;
   backdrop-filter: grayscale(1) blur(4px) brightness(50%);
   display: flex;
