@@ -25,7 +25,6 @@ onMounted(async () => {
     width: '56px',
     height: '56px',
     left: 'calc(50% - 28px)',
-    contentVisibility: 'hidden',
     transition: {
       delay: 2.25,
       type: 'spring',
@@ -44,7 +43,6 @@ onMounted(async () => {
     width: '700px',
     height: '56px',
     left: 'calc(50% - 350px)',
-    contentVisibility: 'hidden',
     transition: {
       type: 'spring',
       stiffness: 200,
@@ -59,7 +57,8 @@ onMounted(async () => {
   <motion.div class="navbar-container" :style="{ y }"
     :initial="{ scale: 0, borderRadius: '50%', width: '56px', height: '56px', left: 'calc(50% - 28px)' }" :animate="animation"
     transition="spring">
-    <a v-for="tab in tabs" :key="tab" :class="{ active: activeTab === tab }" @click="setActive(tab)">
+    <a 
+    v-for="tab in tabs" :key="tab" :class="{ active: activeTab === tab }" @click="setActive(tab)">
       {{ tab }}
     </a>
   </motion.div>
