@@ -45,4 +45,3 @@ onMounted(() => {
   <ShopSection />
   <Footer />
 </template>
-i

@@ -2,12 +2,22 @@
 import ArrowDown from './icons/ArrowDown.vue';
 
 import { animate, motion, useScroll, useTransform } from "motion-v"
+import { ref, onMounted } from 'vue'
 
 const { scrollY } = useScroll()
 
 const y = useTransform(scrollY, value => value * 0.5)
 const rotate = useTransform(scrollY, [0, 1500], [0, 10])
 const scale = useTransform(scrollY, [0, 1500], [1, 1.2])
+
+const videoRef = ref(null)
+
+onMounted(() => {
+  setTimeout(() => {
+    videoRef.value?.play()
+  }, 2000) // wait 3 seconds
+})
+
 
 </script>
 
@@ -16,7 +26,8 @@ const scale = useTransform(scrollY, [0, 1500], [1, 1.2])
         <motion.div :style="{ y, rotate, scale }" :initial="{ filter: 'blur(10px) grayscale(1)', rotate: 20, scale: 4 }"
             :animate="{ filter: ['blur(10px) grayscale(1)', 'blur(0) grayscale(0)'], rotate: 0, scale: 1 }"
             :transition="{ duration: 2, ease: 'easeOut' }">
-            <img src="../assets/images/placeholder-1920x1080.png" draggable="false" class="no-select cover-image" />
+            <!-- <img src="../assets/images/placeholder-1920x1080.png" draggable="false" class="no-select cover-image" /> -->
+            <video ref="videoRef" src="../assets/images/monitoring_cover.webm" draggable="false" class="no-select cover-image" muted loop playsinline></video>
         </motion.div>
 
     </div>
